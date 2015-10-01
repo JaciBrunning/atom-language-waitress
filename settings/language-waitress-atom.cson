@@ -1,0 +1,13 @@
+'.source.waitress-rb':
+  'editor':
+    'completions': [
+      'response_object',
+      'request_object',
+      '$VHOST', '$METHOD', '$HEADERS', '$PATH', '$URI', '$BODY',
+      'lib', 'combo',
+      'includes', 'includes_file',
+      'get', 'post',
+      'get_header', 'get_method', 'get_path', 'get_uri', 'get_querystring',
+      'set_header', 'set_content_type', 'file_ext',
+      'echo', 'write', 'println'
+    ]

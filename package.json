@@ -1,0 +1,14 @@
+{
+  "name": "language-waitress",
+  "version": "0.1.0",
+  "description": "Language Support for the Waitress Web Server",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/JacisNonsense/atom-language-waitress",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

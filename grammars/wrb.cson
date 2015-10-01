@@ -1,0 +1,65 @@
+'scopeName': 'text.html.waitress'
+'name': 'Waitress HTML'
+'fileTypes': [
+  'wrb'
+]
+
+'firstLineMatch': '<(\\?ruby)'
+
+'patterns': [
+  {
+    'include': 'text.html.basic'
+  }
+]
+
+'injections':
+  'text.html.waitress':
+    'patterns': [
+      {
+        'begin': '<(\\?ruby)'
+
+        'beginCaptures':
+          1:
+            'name': 'entity.name.tag.xml.waitress-rb'
+
+        'contentName': 'source.waitress-rb'
+
+        'end': '(\\?)>'
+        'endCaptures':
+          1:
+            'name': 'entity.name.tag.xml.waitress-rb'
+
+        'patterns': [
+          { 'include': 'source.ruby' },
+          {
+            'begin': '\\b(?<!\\.|::)(includes(_file)?|lib|combo)\\b'
+            'captures':
+              '1':
+                'name': 'keyword.other.special-method.waitress-rb.loader'
+            'end': '$|(?=#|\\})'
+            'name': 'meta.kernel.waitress-rb'
+            'patterns': [
+              {
+                'include': 'source.ruby'
+              }
+            ]
+          },
+          {
+            'match': '\\b(get_(header(s)?|method|path|uri|body|querystring))\\b(?![?!])'
+            'name': 'support.function.construct.waitress-rb.get'
+          },
+          {
+            'match': '\\b(set_(header|content_type)|file_ext)\\b(?![?!])'
+            'name': 'support.function.construct.waitress-rb.set'
+          },
+          {
+            'match': '\\b(echo|write|println)\\b(?![?!])'
+            'name': 'support.function.construct.waitress-rb.write'
+          },
+          {
+            'match': '\\b(get|post)\\b(?![?!])'
+            'name': 'variable.language.special-method.waitress-rb.query'
+          }
+        ]
+      }
+    ]

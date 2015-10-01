@@ -1,0 +1,18 @@
+'scopeName': 'config.waitress'
+'name': "Waitress Configuration"
+'firstLineMatch': '(Waitress.configure\\!)'
+
+'patterns': [
+  {
+    'include': 'source.ruby'
+  }
+]
+
+'injections':
+  'config.waitress':
+    'patterns': [
+      {
+        'match': '(\\b|\s+)([a-zA-Z0-9_-]+)\\.(all_hosts|host)\\b'
+        'name': 'keyword.other.special-method.waitress-config.server'
+      }
+    ]
