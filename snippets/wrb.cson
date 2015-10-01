@@ -1,0 +1,10 @@
+'.text.html.waitress':
+  'Waitress Ruby Code (short)':
+    'prefix': 'wrb'
+    'body': '<?ruby \n\t${1}\n?>'
+  'Waitress Ruby Code (mid)':
+    'prefix': 'ruby'
+    'body': '<?ruby \n\t${1}\n?>'
+  'Waitress Ruby Code (long)':
+    'prefix': '<?ruby'
+    'body': '<?ruby \n\t${1}\n?>'
